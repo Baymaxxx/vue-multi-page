@@ -3,6 +3,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import routes from './router.js'
 import http from 'src/lib/http'
+import 'lib-flexible/flexible.js'
 
 import main from './main.vue'
 
@@ -17,8 +18,8 @@ Vue.prototype.$http = http
 // 3. 创建 router 实例，然后传 `routes` 配置
 // 你还可以传别的配置参数, 不过先这么简单着吧。
 const router = new VueRouter({
-  mode: 'hash',   // 强制使用hash模式进行导航，不能指望服务器支持history
-  routes: routes  // （缩写）相当于 routes: routes
+  mode: 'hash', // 强制使用hash模式进行导航，不能指望服务器支持history
+  routes: routes // （缩写）相当于 routes: routes
 })
 
 // 4. 创建和挂载根实例。
