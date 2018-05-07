@@ -16,11 +16,15 @@
 </style>
 
 <script>
+  import console from 'src/lib/blog_demo/index.js';
   export default {
     data: function () {
       return {
         msg: 'Use Vue 2.0 Today!'
       }
+    },
+    mounted() {
+      console.log('11')
     }
   }
 </script>

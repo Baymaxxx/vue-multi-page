@@ -38,8 +38,8 @@ let prod = {
     uploadUri: 'http://prod.qiniu.com/zip_upload'
 }
 let local = {
-    basePath: '/',
-    baseUri: `http://localhost:8000/`,
+    basePath: '',
+    baseUri: `http://localhost:8004/dist`,
     // 以下内容仅用于提示上传cdn命令，在项目中没有实际用途
     account: 'none',
     password: 'none',

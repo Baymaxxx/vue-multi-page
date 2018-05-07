@@ -9,18 +9,19 @@ const exit = require('shelljs')
 const ChildProcess = require('child_process')
 
 let projectConfig = {
-  name: 'multi_vue_demo',
+  name: '2345shopping',
   vcsType: VcsTypeGit, // 设定版本控制工具，用于自动获取版本号
   version: 'undefined', // 如果使用hg/git进行的版本控制的话, 不需要填写该项, 由脚本自动检测tag即可
   staticRoot: '', // 不需要填写, 由name和version自动生成
   project: {
     // 项目列表
 
-        // 组织格式 ： 项目名 => 以项目根目录为基准的index.vue路径
-        // 其在webpack中的对应格式为：[name](生成的js名) => [main.js所在路径]
-        demo: './src/view/demo', // 示例项目，新建页面可以直接复制该项目的代码
-        // blog: './src/view/blog', // 示例项目，利用个人blog提供公共api进行测试
-    }
+    // 组织格式 ： 项目名 => 以项目根目录为基准的index.vue路径
+    // 其在webpack中的对应格式为：[name](生成的js名) => [main.js所在路径]
+    demo: './src/view/demo', // 示例项目，新建页面可以直接复制该项目的代码
+    helloworld: './src/view/helloworld', // 示例项目，新建页面可以直接复制该项目的代码
+    // blog: './src/view/blog', // 示例项目，利用个人blog提供公共api进行测试
+  }
 }
 
 // 根据版本管理工具获取项目版本号
@@ -48,10 +49,10 @@ switch (projectConfig.vcsType) {
     break
   case VcsTypeHg:
     let hgTagContent = fs.readFileSync('./.hgtags', 'utf8') // 获取hgtags的内容
-    let hgVersion  = hgTagContent.trim().split(' ').pop().toString().trim() // 直接trim后取最后一行，以空格分隔获取最新版本号
-    if(hgVersion){
+    let hgVersion = hgTagContent.trim().split(' ').pop().toString().trim() // 直接trim后取最后一行，以空格分隔获取最新版本号
+    if (hgVersion) {
       projectConfig.version = hgVersion
-    }else{
+    } else {
       console.error('没有在项目中解析到版本号，使用undefined作为默认版本号')
     }
     break
