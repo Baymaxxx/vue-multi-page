@@ -44,7 +44,7 @@ vue作为单页面应用已经无可挑剔，但在实际应用的时候，我�
 
 ##  直接使用
 
-1.  [项目使用说明文档](https://github.com/YaoZeyuan/vue-multi-page/blob/master/Guide.md)
+1.  [项目使用说明文档](https://github.com/Baymaxxx/vue-multi-page/blob/master/Guide.md)
 
 ##  具体实现过程
 
