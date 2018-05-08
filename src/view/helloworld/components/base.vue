@@ -73,14 +73,14 @@
 .make-money {
   background: #525df8;
   .banner {
-    // background:url(#{$img}make-money-banner.jpg) 0 0 no-repeat;
+    background:url('../../../assets/img/make-money-banner.jpg') 0 0 no-repeat;
     $h: 500px;
     height: $h;
     background-size: cover;
     text-align: center;
     color: #fff;
     .title {
-      padding: 85 0 65px;
+      padding: 85px 0px 65px;
       color: #fff;
       font-weight: bold;
       font-size: 53px;
@@ -95,10 +95,10 @@
     }
   }
   &-main {
-    padding: 0 30 40px;
+    padding: 0px 30px 40px;
     margin-top: -170px;
     .stars {
-    //   background:url(#{$img}star.pngpx;
+      background:url(../../../assets/img/star.png);
       background-position: 87% 94%; // background-size: 720) auto;
     }
   }
@@ -115,7 +115,7 @@
         width: 483px;
         height: 122px;
         line-height: 122px;
-        // background:url(#{$img}plan-spr.png) 0 0 no-repeat;
+        background:url(../../../assets/img/plan-spr.png) 0 0 no-repeat;
         background-size: cover;
         font-size: 32px;
         color: #fff;
@@ -123,7 +123,7 @@
     }
     &-bd {
       &.money-box-bd1 {
-        padding: 20 40 60 75px;
+        padding: 20px 40px 60px 75px;
       }
       &.money-box-bd2 {
         text-align: center;
@@ -131,8 +131,8 @@
       }
       line-height: 44px;
       .pic {
-        margin: 50 0px;
-        width: 500px;
+        margin: 50px 0px;
+        width: 400px;
       }
       .footer {
         color: #525df8;
@@ -146,7 +146,7 @@
       li {
         position: relative;
         padding-left: 20px;
-        margin: 40 0px;
+        margin: 40px 0px;
         font-size: 28px;
         color: #000;
         a {
@@ -160,15 +160,15 @@
           width: 33px;
           height: 45px;
           &.num1 {
-            // background:url(#{$img}m-money-list1.png) 0 0 no-repeat;
+            background:url(../../../assets/img/m-money-list1.png) 0 0 no-repeat;
             background-size: cover;
           }
           &.num2 {
-            // background:url(#{$img}m-money-list2.png) 0 0 no-repeat;
+            background:url(../../../assets/img/m-money-list2.png) 0 0 no-repeat;
             background-size: cover;
           }
           &.num3 {
-            // background:url(#{$img}m-money-list3.png) 0 0 no-repeat;
+            background:url(../../../assets/img/m-money-list3.png) 0 0 no-repeat;
             background-size: cover;
           }
         }
