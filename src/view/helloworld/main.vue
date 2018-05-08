@@ -6,19 +6,14 @@
     <div>
       <!--实际页面内容-->
       <router-view></router-view>
-      <div class="inner">
-        123123
-      </div>
     </div>
   </div>
 </template>
 
-<style scoped>
+<style lang="scss">
+@import '../../assets/scss/style.scss';
 /*  style标签之内会被作为css进行处理，所以需要使用css的注释形式   */
 /*  加上scoped可以将css的作用效果限定在该组件之内 */
-.inner {
-  color: red;
-}
 </style>
 
 <script>
