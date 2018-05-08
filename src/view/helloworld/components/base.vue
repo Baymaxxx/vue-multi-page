@@ -132,7 +132,7 @@
       line-height: 44px;
       .pic {
         margin: 50px 0px;
-        width: 400px;
+        width: 500px;
       }
       .footer {
         color: #525df8;
