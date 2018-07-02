@@ -1,69 +1,9 @@
 <template>
   <!-- vue要求每个组件中都有且只能有一个根元素 -->
   <div class="wrapper">
-		<div class="make-money">
-			<div class="banner">
-				<h1 class="title">如何用章鱼星球赚钱
-				</h1>
-				<p class="summary">章鱼星球是一款基于区块链的高性能云盘
-				</p>
-				<p class="summary">只需插电联网，就能每天自动为您产生积分星
-				</p>
-			</div>
-			<div class="make-money-main">
-				<div class="stars">
-					<div class="money-box">
-						<div class="money-box-hd">
-							<h1 class="tit">赚钱只需三步</h1>
-						</div>
-						<div class="money-box-bd money-box-bd1">
-							<ul>
-								<li>
-									<div class="num num1"></div>
-									<p>前往星球联盟官网
-										<a href="http://m.2345.org#buyStar">2345.org</a>购买章鱼星球</p>
-								</li>
-								<li>
-									<div class="num num2"></div>
-									<p>
-										确保章鱼星球插电联网并接入容量≥32G的硬盘或U盘
-									</p>
-									<img class="pic" src="~img/m-money-pic1.jpg" alt="pic1">
-									<p class="tip">
-										* 章鱼星球指示灯为蓝色时，即为联网成功
-									</p>
-								</li>
-								<li>
-									<div class="num num3"></div>
-									<p>打开APP进入“章鱼星球”页，点击绑定按钮并扫描章鱼星球背后二维码即可绑定
-									</p>
-									<img class="pic" src="~img/m-money-pic2.jpg" alt="pci2">
-									<div class="footer">
-										<p>
-											绑定成功后，
-										</p>
-										<p>
-											章鱼星球就能为您自动产生积分星啦！
-										</p>
-									</div>
-								</li>
-							</ul>
-						</div>
-					</div>
-					<div class="money-box">
-						<div class="money-box-hd">
-							<h1 class="tit">如何查看收益</h1>
-						</div>
-						<div class="money-box-bd money-box-bd2">
-							<p class="tit-tip">在首页，点击“我的积分星”即可查看收益
-							</p>
-							<img class="pic" src="~img/m-money-pic3.jpg" alt="pci3">
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+		child1
+        <router-link to="/">parent</router-link>
+  </div>
 </template>
 
 <style lang='scss'>

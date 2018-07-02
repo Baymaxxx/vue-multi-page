@@ -4,6 +4,7 @@ import VueRouter from 'vue-router'
 import routes from './router.js'
 import http from 'src/lib/http'
 import 'lib-flexible/flexible.js'
+import '~scss/style.scss'
 
 import main from './main.vue'
 

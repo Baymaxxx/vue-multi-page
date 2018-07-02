@@ -2,7 +2,7 @@ import Vue from 'vue'
 
 import http from 'src/lib/http'
 import 'lib-flexible/flexible.js'
-import '../../assets/scss/style.scss'
+import '~scss/style.scss'
 
 import main from './main.vue'
 

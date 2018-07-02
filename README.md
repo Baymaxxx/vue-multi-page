@@ -224,7 +224,7 @@ vue作为单页面应用已经无可挑剔，但在实际应用的时候，我�
                 2.  具体解释见文件注释,
             2.  修改`./config/index.js`内容，引入并对外发布`./config/project.js`
                 1.  index.js的内容解释见文件注释
-                2.  修改本地调试端口的话可以在index.js中修改dev.port的值(默认的8080已经够用了, 所以就没再加配置项)
+                2.  修改本地调试端口的话可以在index.js中修改dev.port的值(默认的8081已经够用了, 所以就没再加配置项)
         2.  添加插件
             1.  添加`./build/plugin/webpack/generate_html_template_list`插件，用于根据项目配置为webpack生成html配置模版
             2.  添加`./build/plugin/webpack/generate_map_json`插件，用于在编译好js后生成一份map.json，方便前端调用
@@ -249,11 +249,11 @@ vue作为单页面应用已经无可挑剔，但在实际应用的时候，我�
                 红框部分即为demo、signin、zhihu对应的本地调试地址
                 (
 
-                http://localhost:8080/multi_vue_demo/0.0.2/html/demo/index.html、
+                http://localhost:8081/multi_vue_demo/0.0.2/html/demo/index.html、
 
-                http://localhost:8080/multi_vue_demo/0.0.2/html/signin/index.html、
+                http://localhost:8081/multi_vue_demo/0.0.2/html/signin/index.html、
 
-                http://localhost:8080/multi_vue_demo/0.0.2/html/zhihu/index.html
+                http://localhost:8081/multi_vue_demo/0.0.2/html/zhihu/index.html
 
                 )
 

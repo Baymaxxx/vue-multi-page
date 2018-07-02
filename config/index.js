@@ -44,7 +44,7 @@ module.exports = {
   dev: {
     // 本地调试配置
     env: require("./dev.env"),
-    port: debug.devPort ? debug.devPort : 8080, // 调试地址端口
+    port: debug.devPort ? debug.devPort : 8081, // 调试地址端口
     autoOpenBrowser: true,
     assetsSubDirectory: ".", // 子文件夹前缀
     assetsPublicPath: "/",
