@@ -1,7 +1,7 @@
 <template>
   <!-- vue要求每个组件中都有且只能有一个根元素 -->
   <div class="wrapper">
-    <router-link to="/child1">child1</router-link>
+    <router-link to="/child1" class="bor">child1</router-link>
 		<div class="make-money">
 			<div class="banner">
 				<h1 class="title">如何用章鱼星球赚钱
@@ -70,6 +70,12 @@
 <style lang='scss'>
 /*  style标签之内会被作为css进行处理，所以需要使用css的注释形式   */
 /*  加上scoped可以将css的作用效果限定在该组件之内 */
+.bor{
+  width: 100%;
+  display: block;
+    // border-top: 1px solid red;
+    @include border1pxbg(top, red);
+}
 .make-money {
   background: #525df8;
   .banner {

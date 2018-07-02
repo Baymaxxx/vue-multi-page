@@ -65,7 +65,7 @@ if (!projectConfig.version) {
   console.error('项目版本号解析失败，终止运行')
   exit(1002)
 }
-
+console.log('projectConfig.version:'+projectConfig.version)
 // 合成静态资源路径
 projectConfig.staticRoot = projectConfig.version
 

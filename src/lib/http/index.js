@@ -18,7 +18,10 @@ let http = axios.create({
     return data
   }],
   // 设置post类型
-  headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+  headers: {
+    'token': 'HgIAB1YAUlkPBwJXUQdUD1BUBAJTD1NWVVwEXlsCVlY%3D',
+    'not': '1' // 实现本地不加密
+  }
 })
 
 // vue-jsonp的调用方式和axios一致

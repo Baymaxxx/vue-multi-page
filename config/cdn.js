@@ -39,7 +39,7 @@ let prod = {
 }
 let local = {
     basePath: '',
-    baseUri: `http://localhost:8004/dist`,
+    baseUri: `http://localhost:8005`,
     // 以下内容仅用于提示上传cdn命令，在项目中没有实际用途
     account: 'none',
     password: 'none',

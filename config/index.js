@@ -26,8 +26,8 @@ module.exports = {
     env: require("./prod.env"),
     index: path.resolve(__dirname, "../dist/index.html"),
     assetsRoot: path.resolve(__dirname, "../dist"), // 公共资源地址
-    assetsSubDirectory: "./" + projectConfig.staticRoot + "/", // 子文件夹前缀 // 在webpack2中编译需要加上后缀/ ，否则会报操作错误Error
-    assetsPublicPath: cdn.baseUri + "/" + cdn.basePath + "/", // 静态地址前缀，根据cdn环境配置改变
+    assetsSubDirectory: projectConfig.staticRoot, // 子文件夹前缀 // 在webpack2中编译需要加上后缀/ ，否则会报操作错误Error
+    assetsPublicPath: cdn.baseUri + "/" + cdn.basePath + "", // 静态地址前缀，根据cdn环境配置改变
     productionSourceMap: false, // 是否生成map文件(设成true会额外生成一份map文件方便前端调试，但为了防止反爬虫代码被破解，所以这里用了false)
     // Gzip off by default as many popular static hosts such as
     // Surge or Netlify already gzip all static assets for you.
@@ -48,7 +48,16 @@ module.exports = {
     autoOpenBrowser: true,
     assetsSubDirectory: ".", // 子文件夹前缀
     assetsPublicPath: "/",
-    proxyTable: {}, // 可以在这里配置端口转发(解决本地调试时的跨域问题),这边为了方便，我就直接在dev-server代码中进行修改了
+    proxyTable: {
+      '/user': {
+        // 测试环境
+        target: 'http://www.2345shengqian.com/',  // 接口域名
+        changeOrigin: true,  //是否跨域
+        pathRewrite: {
+            '^/user': ''   //需要rewrite重写的,
+        }              
+       } 
+    }, // 可以在这里配置端口转发(解决本地调试时的跨域问题),这边为了方便，我就直接在dev-server代码中进行修改了
     // CSS Sourcemaps off by default because relative paths are "buggy"
     // with this option, according to the CSS-Loader README
     // (https://github.com/webpack/css-loader#sourcemaps)
@@ -65,7 +74,7 @@ module.exports = {
       return pathname.indexOf('async') !== -1
     },
     host: {
-      target: 'http://lo.yaozeyuan.online/', // 本地mock服务器地址
+      target: 'http://www.2345shengqian.com', // 本地mock服务器地址
       changeOrigin: true, // needed for virtual hosted sites
       ws: true // proxy websockets
     }
