@@ -14,7 +14,7 @@
       // border-top: 1px solid red;
     // @include border1pxbg(top, red);
     @include border1px(bottom, red, after);
-    display: block;
+    display: flex;
 }
 </style>
 

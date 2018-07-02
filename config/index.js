@@ -53,9 +53,9 @@ module.exports = {
         // 测试环境
         target: 'http://www.2345shengqian.com/',  // 接口域名
         changeOrigin: true,  //是否跨域
-        pathRewrite: {
-            '^/user': ''   //需要rewrite重写的,
-        }              
+        // pathRewrite: {
+        //     '^/user': ''   //需要rewrite重写的,
+        // }              
        } 
     }, // 可以在这里配置端口转发(解决本地调试时的跨域问题),这边为了方便，我就直接在dev-server代码中进行修改了
     // CSS Sourcemaps off by default because relative paths are "buggy"
@@ -67,16 +67,17 @@ module.exports = {
   },
   cdn: cdn, // cdn 相关配置
   projectConfig: projectConfig,
-  localServer: debug.localServer ? debug.localServer : {
-    filter: function (pathname, req) {
-      // 本地调试vue的时候会有跨域问题，所以这里自定义一个过滤器进行检测，命中规则就自动转发到接口地址上去
-      // 检测是否有接口标志关键字，有的话就转发过去
-      return pathname.indexOf('async') !== -1
-    },
-    host: {
-      target: 'http://www.2345shengqian.com', // 本地mock服务器地址
-      changeOrigin: true, // needed for virtual hosted sites
-      ws: true // proxy websockets
-    }
-  }
+  // localServer: debug.localServer ? debug.localServer : {
+  //   filter: function (pathname, req) {
+  //     // 本地调试vue的时候会有跨域问题，所以这里自定义一个过滤器进行检测，命中规则就自动转发到接口地址上去
+  //     // 检测是否有接口标志关键字，有的话就转发过去
+  //     return pathname.indexOf('async') !== -1
+  //   },
+  //   port:'8081',
+  //   host: {
+  //     target: 'http://www.2345shengqian.com', // 本地mock服务器地址
+  //     changeOrigin: true, // needed for virtual hosted sites
+  //     ws: true // proxy websockets
+  //   }
+  // }
 }

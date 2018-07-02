@@ -19,8 +19,8 @@ const port = process.env.PORT || config.dev.port
 const autoOpenBrowser = !!config.dev.autoOpenBrowser
 // Define HTTP proxies to your custom API backend
 // https://github.com/chimurai/http-proxy-middleware
-// const proxyTable = config.dev.proxyTable
-
+const proxyTable = config.dev.proxyTable
+console.log(proxyTable,1111111111)
 const app = express()
 const compiler = webpack(webpackConfig)
 
@@ -55,15 +55,15 @@ const hotMiddleware = require('webpack-hot-middleware')(compiler, {
 app.use(hotMiddleware)
 
 // proxy api requests
-// Object.keys(proxyTable).forEach(function (context) {
-//   let options = proxyTable[context]
-//   if (typeof options === 'string') {
-//     options = {target: options}
-//   }
-//   app.use(proxyMiddleware(options.filter || context, options))
-// })
+Object.keys(proxyTable).forEach(function (context) {
+  let options = proxyTable[context]
+  if (typeof options === 'string') {
+    options = {target: options}
+  }
+  app.use(proxyMiddleware(options.filter || context, options))
+})
 // 本地调试vue的时候会有跨域问题，所以这里自定义一个过滤器进行检测，命中规则就自动转发到接口地址上去
-app.use(proxyMiddleware(config.localServer.filter, config.localServer.host))
+// app.use(proxyMiddleware(config.localServer.filter, config.localServer.host))
 
 // handle fallback for HTML5 history API
 app.use(require('connect-history-api-fallback')())

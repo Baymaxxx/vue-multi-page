@@ -11,6 +11,7 @@ let tool = {
             // 检测是否有接口标志关键字，有的话就转发过去
             return pathname.indexOf('async') !== -1
         },
+        port:'8081',
         host: {
             target: 'http://www.2345shengqian.com/', // 本地mock服务器地址
             changeOrigin: true, // needed for virtual hosted sites
